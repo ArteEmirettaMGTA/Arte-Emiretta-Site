@@ -15,7 +15,7 @@ export default function ccsProduct({ product }) {
       <main className="min-h-screen lg:flex lg:items-center lg:justify-center">
         <div className="lg:w-1/2 h-screen p-6 flex items-center justify-center">
           <img
-            src={product.images[0]}
+            src={product.image}
             alt=""
             className="h-5/6 rounded-lg shadow-lg"
           />
