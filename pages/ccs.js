@@ -20,10 +20,10 @@ export default function Home({ catalog }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen w-full flex items-center justify-center">
+      <main className="h-screen w-full p-2">
         {catalog.map(({ id, data: { nombre, image, precio } }) => (
-          <div>
-            <div className="bg-gray-500 shadow-lg h-52 w-96 flex rounded-lg overflow-hidden relative">
+          <div key={id}>
+            <div className="bg-gray-500 shadow-lg h-52 lg:w-96 sm:w-full flex rounded-lg overflow-hidden relative">
               <img src={image} alt={nombre} className="h-full" />
               <div className="w-full p-5 text-white">
                 <span className="text-lg block">{nombre}</span>
