@@ -6,7 +6,7 @@ import { getDoc, doc } from "firebase/firestore";
 
 export default function ccsProduct({ product }) {
   return (
-    <div className="bg-gray-900 min-h-screen">
+    <div className="bg-gray-200 min-h-screen">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,17 +21,19 @@ export default function ccsProduct({ product }) {
           />
         </div>
         <div className="p-4 lg:w-1/2 lg:h-full lg:p-20">
-          <h1 className="text-white font-bold text-xl">{product.nombre}</h1>
-          <h2 className="text-gray-300 text-lg">{product.precio} $</h2>
+          <h1 className="text-gray-800 font-bold text-xl">{product.nombre}</h1>
+          <h2 className="text-gray-700 text-lg">{product.precio} $</h2>
           <hr className="my-4 border-gray-600" />
           <p
-            className="text-white"
+            className="text-gray-800"
             dangerouslySetInnerHTML={{ __html: product.descripcion }}
           />
-          <button className="px-8 py-2 border-2 border-indigo-600 mr-2 text-white text-sm font-medium rounded hover:border-0 hover:bg-indigo-600 focus:outline-none">
-            Atras
-          </button>
-          <button className="px-8 py-2 border-2 border-indigo-600 ml-2 bg-indigo-600 text-white text-sm font-medium rounded hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500 mt-3">
+          <Link href="/ccs">
+            <a className="px-8 py-2 border-2 border-gray-600 mr-2 text-gray-800 text-sm font-medium rounded hover:bg-gray-600 hover:text-white focus:outline-none">
+              Atras
+            </a>
+          </Link>
+          <button className="px-8 py-2 border-2 border-gray-600 ml-2 bg-gray-600 text-white text-sm font-medium rounded hover:bg-gray-500 focus:outline-none focus:bg-indigo-500 mt-3">
             Ordenar
           </button>
         </div>

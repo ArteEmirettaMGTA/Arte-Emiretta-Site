@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Head from "next/head";
 import loadFirebase from "../firebase.config";
-import { collection, getDoc, doc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  getDoc,
+  doc,
+  setDoc,
+  query,
+  getDocs,
+} from "firebase/firestore";
 
 export default function Home() {
   return (
@@ -31,17 +38,16 @@ export const getServerSideProps = async () => {
   const firebase = await loadFirebase();
   const db = firebase.db();
 
-  const docRef = doc(db, "productos", "XRcjLyRxmN3QW3EgxBx3");
-  const docSnap = await getDoc(docRef);
+  let products = [];
 
-  if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
-  } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
-  }
+  const querySnapshot = await getDocs(collection(db, "ccsCatalog"));
+  await querySnapshot.forEach((doc) => {
+    data.push({ id: doc.id, data: doc.data() });
+  });
 
   return {
-    props: {},
+    props: {
+        catalog
+    },
   };
 };
