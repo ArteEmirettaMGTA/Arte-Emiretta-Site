@@ -29,14 +29,18 @@ export default function ccsProduct({ product }) {
             className="text-gray-800"
             dangerouslySetInnerHTML={{ __html: product.descripcion }}
           />
-          <Link href="/ccs">
-            <a className="px-8 py-2 border-2 border-gray-600 mr-2 text-gray-800 text-sm font-medium rounded hover:bg-gray-600 hover:text-white focus:outline-none">
-              Atras
-            </a>
-          </Link>
-          <button className="px-8 py-2 border-2 border-gray-600 ml-2 bg-gray-600 text-white text-sm font-medium rounded hover:bg-gray-500 focus:outline-none focus:bg-indigo-500 mt-3">
-            Ordenar
-          </button>
+          <div className="mt-4">
+            <Link href="/ccs">
+              <a className="px-8 py-2 border-2 border-gray-600 mr-2 text-gray-800 text-sm font-medium rounded hover:bg-gray-600 hover:text-white focus:outline-none">
+                Atras
+              </a>
+            </Link>
+            <Link href={product.link}>
+              <a className="px-8 py-2 border-2 border-gray-600 ml-2 bg-gray-600 text-white text-sm font-medium rounded hover:bg-gray-500 focus:outline-none focus:bg-indigo-500 mt-3">
+                Ordenar
+              </a>
+            </Link>
+          </div>
         </div>
       </main>
     </div>
