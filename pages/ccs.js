@@ -16,8 +16,9 @@ export default function Home({ catalog }) {
   return (
     <div className="bg-gray-200 h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>Arte Emiretta Caracas</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#AAA" />
       </Head>
 
       <main className="h-screen w-full p-2">

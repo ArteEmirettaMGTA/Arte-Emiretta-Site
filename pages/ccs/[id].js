@@ -8,8 +8,9 @@ export default function ccsProduct({ product }) {
   return (
     <div className="bg-gray-200 min-h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>Arte Emiretta Caracas - {product.nombre}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#AAA" />
       </Head>
 
       <main className="min-h-screen lg:flex lg:items-center lg:justify-center">
