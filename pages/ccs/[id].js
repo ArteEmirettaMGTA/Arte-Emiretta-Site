@@ -23,7 +23,7 @@ export default function ccsProduct({ product }) {
         </div>
         <div className="p-4 lg:w-1/2 lg:h-full lg:p-20">
           <h1 className="text-gray-800 font-bold text-xl">{product.nombre}</h1>
-          <h2 className="text-gray-700 text-lg">{product.precio} $</h2>
+          <h2 className="text-gray-700 text-lg">Precio: {product.precio} $</h2>
           <hr className="my-4 border-gray-600" />
           <p
             className="text-gray-800"
